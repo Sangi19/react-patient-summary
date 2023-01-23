@@ -1,7 +1,7 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 
-export default function PatientDetails({patientData}) {
+export default function PatientDetails({patientSummaryData}) {
   return (
     <Box
       sx={{
@@ -14,10 +14,10 @@ export default function PatientDetails({patientData}) {
     >
         <h2>Patient Details</h2>
         <div>
-            <p>patient Id:{patientData.patientId}</p>
-            <p>Allergy:{patientData.allergy}</p>
-            <p>known Diagnosis:{patientData.knownDiagnosis}</p>
-            <p>past Medical History:{patientData.pastMedHistory}</p>
+            {
+            patientSummaryData?.patient_detail.map(pdetail=>
+                <p>{pdetail.content}</p>
+            )}
         </div>
     </Box>
   );
