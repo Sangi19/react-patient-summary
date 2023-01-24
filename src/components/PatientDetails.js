@@ -4,13 +4,12 @@ import Box from '@mui/material/Box';
 export default function PatientDetails({patientSummaryData}) {
   return (
     <Box
-      sx={{
-        width: 1010,
-        height: 200,
-        backgroundColor: '#FFFFFF',
-        '&:hover': {
-        },
-      }}
+     sx={{
+      height: 'max-content',
+      backgroundColor: '#f5efef',
+      '&:hover': {
+      },
+  }}
     >
         <h2>Patient Details</h2>
         <div>

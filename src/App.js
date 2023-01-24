@@ -11,37 +11,35 @@ function App() {
   return (
     <div className="mainContainer">
       <h1>Patient Summary of a Patient</h1>
-      <h2>patient json data:{patientSummaryData.code}</h2>
+        <div className="patientDetails">       
+        <Box
+          sx={{
+              width: 1010,
+              height: 'max-content',
+              backgroundColor: '#FFFFFF',
+              margin:'1rem',
+              '&:hover': {
+              },
+            }}
+          >
+            <PatientDetails patientSummaryData={patientSummaryData} />
+           </Box>
+        </div>
 
-      <Box
-        sx={{
-          width: 1500,
-          height: 1500,
-          backgroundColor: '#E7EBF0',
-          '&:hover': {
-          },
-        }}><br />
-      
-          <div className="patientDetails">       
-              <PatientDetails patientSummaryData={patientSummaryData} />
-          </div>
-
-          <div className="patientSummary">
-            <Box
-              sx={{
-                  width: 1010,
-                  height: 200,
-                  backgroundColor: '#FFFFFF',
-                  '&:hover': {
-                  },
-              }}
-              >
-              {/* {patientData?.summary.map(pSummary=> 
-              <PatientSummary pSummary={pSummary} />
-              )} */}
-            </Box>
-          </div>
-      </Box>
+        <div className="patientSummary">
+          <Box
+            sx={{
+                width: 1010,
+                height: 'max-content',
+                backgroundColor: '#FFFFFF',
+                margin:'1rem',
+                '&:hover': {
+                },
+            }}
+            >
+            <PatientSummary patientSummaryData={patientSummaryData} />            
+          </Box>
+        </div>
     </div>
   );
 }
