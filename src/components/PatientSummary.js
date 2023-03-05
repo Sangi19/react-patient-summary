@@ -9,6 +9,7 @@ export default function PatientSummary({patientSummaryData}) {
             sx={{
                 height: 'max-content',
                 backgroundColor: '#f5efef',
+                padding: '1rem',
                 '&:hover': {
                 },
             }}
